@@ -39,7 +39,12 @@
 			function onDeviceReady() {
 		        document.addEventListener("menubutton", onMenuKeyDown, false);
 	        	document.addEventListener("volumeupbutton", onVolumeUpKeyDown, false);
+	        	document.addEventListener("backbutton", onBackKeyDown, false);
 		    }
+
+		    function onBackKeyDown() {
+			    document.style.backgroundColor = 'rgb('+Math.random()*255+','+Math.random()*255+','+Math.random()*255+')';
+			}
 
 		    function onMenuKeyDown() {
 		    	document.getElementById('sup').innerHTML = "Don't touch that key pleeeease. Menu key is not ready yet =(";
