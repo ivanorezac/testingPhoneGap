@@ -10,5 +10,4 @@
     <access origin="*" />
     <preference name="orientation" value="portrait" />
     <icon src="android/res/drawable-xhdpi/Icon.png" />
-    <preference name="phonegap-version" value="4.0.0" />
 </widget>
