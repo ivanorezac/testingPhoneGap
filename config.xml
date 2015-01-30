@@ -1,5 +1,5 @@
-<widget id="com.ivanorezac.hello" version="0.0.2">
-    <name>HelloWorld</name>
+<widget id="com.ivanorezac.world" version="0.0.3">
+    <name>Ivanorezac's world</name>
     <description>
         My testing application
     </description>
@@ -10,4 +10,5 @@
     <access origin="*" />
     <preference name="orientation" value="portrait" />
     <icon src="android/res/drawable-xhdpi/Icon.png" />
+    <preference name="phonegap-version" value="4.0.0" />
 </widget>
