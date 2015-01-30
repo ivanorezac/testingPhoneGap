@@ -40,6 +40,13 @@
 		        document.addEventListener("menubutton", onMenuKeyDown, false);
 	        	document.addEventListener("volumeupbutton", onVolumeUpKeyDown, false);
 	        	document.addEventListener("backbutton", onBackKeyDown, false);
+	        	setInterval(banOffline(), 1000);
+		    }
+
+		    function banOffline() {
+		    	if(!navigator.onLine) {
+		    		window.location="disconnected.html";
+		    	}
 		    }
 
 		    function onBackKeyDown() {

@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+		<style>
+		body{
+			background-color: #2d4558;
+			color: white;
+			text-align: center;
+		}
+		</style>
+	</head>
+	<body>
+		Please reconnect to the internet... this application requires internet connection :(
+		<script>
+			function onLoad() {
+		        document.addEventListener("deviceready", onDeviceReady, false);
+		    }
+		    onDeviceReady() {
+	        	setInterval(reconnected(), 1000);
+		    }
+
+		    function reconnected() {
+		    	if(navigator.onLine) {
+		    		window.location="index.html";
+		    	}
+		    }
+		</script>
+	</body>
+</html>
