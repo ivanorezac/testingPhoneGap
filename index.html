@@ -15,6 +15,7 @@
 		<p id='sup'>What's up?</p>
 		<p id='music'>Up for some music?</p>
 		<br /><img src="android/res/drawable-ldpi/Icon.png" />
+		<p id='networkCheck'>Network check state: unchecked</p>
 		<script>
 			function onLoad() {
 		        document.addEventListener("deviceready", onDeviceReady, false);
@@ -40,17 +41,19 @@
 		        document.addEventListener("menubutton", onMenuKeyDown, false);
 	        	document.addEventListener("volumeupbutton", onVolumeUpKeyDown, false);
 	        	document.addEventListener("backbutton", onBackKeyDown, false);
-	        	setInterval(banOffline(), 1000);
+	        	setInterval(banOffline, 1000);
 		    }
 
 		    function banOffline() {
+		    	document.getElementById('networkCheck').innerHTML = 'Network check state: checked and still checking!';
 		    	if(!navigator.onLine) {
 		    		window.location="disconnected.html";
 		    	}
+		    	return false;
 		    }
 
 		    function onBackKeyDown() {
-			    document.style.backgroundColor = 'rgb('+Math.random()*255+','+Math.random()*255+','+Math.random()*255+')';
+			    document.body.style.backgroundColor = 'rgb(' + Math.round(Math.random()*255) + ',' + Math.round(Math.random()*255) +','+ Math.round(Math.random()*255) +')';
 			}
 
 		    function onMenuKeyDown() {

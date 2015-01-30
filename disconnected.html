@@ -15,14 +15,16 @@
 			function onLoad() {
 		        document.addEventListener("deviceready", onDeviceReady, false);
 		    }
-		    onDeviceReady() {
-	        	setInterval(reconnected(), 1000);
+		    function onDeviceReady() {
+	        	setInterval(reconnected, 1000);
 		    }
 
 		    function reconnected() {
+		    	console.log('checked');
 		    	if(navigator.onLine) {
 		    		window.location="index.html";
 		    	}
+		    	return false;
 		    }
 		</script>
 	</body>
