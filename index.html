@@ -12,6 +12,8 @@
 	<body>
 		Hello world<br />
 		Today's date is: <span id="date"></span>
+		<p id='sup'>What's up?</p>
+		<p id='music'>Up for some music?</p>
 		<script>
 		var d = new Date();	
 		var month = new Array();
@@ -28,6 +30,20 @@
 		month[10] = "November";
 		month[11] = "December";
 		document.getElementById('date').innerHTML = d.getDate()+'/'+month[d.getMonth()]+'/'+d.getFullYear();
+
+		function onDeviceReady() {
+	        document.addEventListener("menubutton", onMenuKeyDown, false);
+        	document.addEventListener("volumeupbutton", onVolumeUpKeyDown, false);
+	    }
+
+	    function onMenuKeyDown() {
+	    	document.getElementById('sup').innerHTML = "Don't touch that key pleeeease. Menu key is not ready yet =(";
+	    }
+
+
+	    function onVolumeUpKeyDown() {
+	    	document.getElementById('music').innerHTML = "Rock N' Roll";
+	    }
 		</script>
 		<br /><img src="android/res/drawable-ldpi/Icon.png" />
 	</body>
