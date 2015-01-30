@@ -7,6 +7,7 @@
         Ivanorezac
     </author>
     <content src="index.html" />
+    <content src="disconnected.html" />
     <access origin="*" />
     <preference name="orientation" value="portrait" />
     <icon src="android/res/drawable-xhdpi/Icon.png" />
