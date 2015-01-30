@@ -1,4 +1,4 @@
-<widget id="com.example.hello" version="0.0.1">
+<widget id="com.ivanorezac.hello" version="0.0.2">
     <name>HelloWorld</name>
     <description>
         My testing application
@@ -8,4 +8,5 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
+    <preference name="orientation" value="portrait" />
 </widget>
