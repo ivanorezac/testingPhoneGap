@@ -1,0 +1,11 @@
+<widget id="com.example.hello" version="0.0.1">
+    <name>HelloWorld</name>
+    <description>
+        My testing application
+    </description>
+    <author email="ivanorezac2@gmail.com" href="http://ivanorezac.com">
+        Ivanorezac
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+</widget>
